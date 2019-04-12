@@ -33,8 +33,10 @@ window.Finalize()
 
 graph = window.FindElement('graph')      
 circle = graph.DrawCircle((75,75), 25, fill_color='black',line_color='white')      
-point = graph.DrawPoint((75,75), 10, color='green')      
-oval = graph.DrawOval((25,300), (100,280), fill_color='purple', line_color='purple'  )      
+point = graph.DrawPoint((75,75), 10, color='green')    
+# print(point,'---')  
+oval = graph.DrawOval((25,300), (100,280), fill_color='purple', line_color='purple'  )  
+# print(oval,'!!!!')    
 rectangle = graph.DrawRectangle((25,300), (100,280), line_color='purple'  )      
 line = graph.DrawLine((0,0), (100,100))      
 
@@ -47,8 +49,10 @@ while True:
     elif event is '红色':      
         graph.TKCanvas.itemconfig(circle, fill = "Red")      
     elif event is '移动':      
-        graph.MoveFigure(point, 10,10)      
-        graph.MoveFigure(circle, 10,10)      
+        graph.MoveFigure(point, 10,10)  
+        # print(point)    
+        graph.MoveFigure(circle, 10,10) 
+        # print(circle)     
         graph.MoveFigure(oval, 10,10)      
         graph.MoveFigure(rectangle, 10,10)
 
